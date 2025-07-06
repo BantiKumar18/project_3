@@ -43,7 +43,7 @@ wheels = [
 [[package]]
 name = "email-validator"
 version = "2.2.0"
-source = { registry = "https://pypi.org/simple" }
+source = { registry =  "https://pypi.org/simple" }
 dependencies = [
     { name = "dnspython" },
     { name = "idna" },

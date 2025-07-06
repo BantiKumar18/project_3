@@ -46,7 +46,7 @@ This is a web-based collaborative document editor built with Flask (Python backe
 ## Data Flow
 
 1. **Document Creation**: Frontend sends POST request → Backend generates UUID → Document stored in memory
-2. **Document Retrieval**: Frontend requests document list → Backend returns formatted document metadata
+2. **Document Retrieval**: Frontend  requests document list → Backend returns formatted document metadata
 3. **Collaboration Simulation**: Random mock users assigned to documents for demonstration
 4. **Editor State**: Draft.js manages rich text state on frontend
 

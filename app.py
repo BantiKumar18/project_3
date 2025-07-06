@@ -3,17 +3,13 @@ import logging
 from flask import Flask
 from flask_cors import CORS
 
-# Configure logging
 logging.basicConfig(level=logging.DEBUG)
 
-# Create the app
 app = Flask(__name__, static_folder='static', static_url_path='')
 app.secret_key = os.environ.get("SESSION_SECRET", "dev-secret-key")
 
-# Enable CORS for all routes
 CORS(app)
 
-# In-memory storage for documents
 documents = {}
 document_collaborators = {}
 mock_users = [
@@ -23,7 +19,6 @@ mock_users = [
     {"id": 4, "name": "Diana Prince", "color": "#96CEB4"},
 ]
 
-# Import routes
 from routes import *
 
 if __name__ == '__main__':

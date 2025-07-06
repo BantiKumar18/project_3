@@ -44,7 +44,6 @@ def create_document():
             'updated_at': timestamp
         }
         
-        # Add mock collaborators
         document_collaborators[doc_id] = random.sample(mock_users, random.randint(1, 3))
         
         return jsonify(documents[doc_id]), 201

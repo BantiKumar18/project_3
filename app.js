@@ -1,7 +1,6 @@
 const { useState, useEffect, useRef, useCallback } = React;
 const { Editor, EditorState, RichUtils, convertToRaw, convertFromRaw, getDefaultKeyBinding } = Draft;
 
-// API service
 const api = {
     async getDocuments() {
         const response = await axios.get('/api/documents');
