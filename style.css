@@ -1,0 +1,131 @@
+/* Custom styles for the document editor */
+.document-editor {
+    min-height: 400px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    background-color: var(--bs-body-bg);
+}
+
+.editor-toolbar {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    background-color: var(--bs-secondary-bg);
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.editor-content {
+    min-height: 300px;
+    padding: 1rem;
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    color: var(--bs-body-color);
+}
+
+.editor-content .public-DraftEditor-content {
+    min-height: 300px;
+}
+
+.collaborator-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    margin-right: 0.5rem;
+}
+
+.collaborator-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.active-collaborator {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+.document-card {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.document-card:hover {
+    transform: translateY(-2px);
+}
+
+.toolbar-button {
+    border: none;
+    background: none;
+    padding: 0.375rem 0.75rem;
+    margin: 0 0.125rem;
+    border-radius: 0.25rem;
+    color: var(--bs-body-color);
+    transition: background-color 0.15s ease-in-out;
+}
+
+.toolbar-button:hover {
+    background-color: var(--bs-secondary);
+}
+
+.toolbar-button.active {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--bs-secondary);
+    border-top: 2px solid var(--bs-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.sidebar {
+    border-right: 1px solid var(--bs-border-color);
+    background-color: var(--bs-secondary-bg);
+}
+
+.main-content {
+    background-color: var(--bs-body-bg);
+}
+
+.document-list-item {
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.document-list-item:hover {
+    background-color: var(--bs-secondary);
+}
+
+.document-list-item.active {
+    background-color: var(--bs-primary);
+    color: white;
+}
+
+.share-link-input {
+    font-family: monospace;
+    font-size: 0.875rem;
+}
